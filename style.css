@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 87px;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 36px;
+}
+
+.container {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.headerTextPart {
+    text-align: center;
+    padding: 64px;
+    background-color: #196B78;
+}
+
+.headerTextPart .container h1 {
+    color: #CCF8FF;
+}
+
+.headerTextPart .container h3 {
+    color: #CCF8FFBF;
+}
+
+.inputToFindPart {
+    height: 64px;
+}
+
+.inputToFindPart .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputToFind {
+    height: 64px;
+    width: 820px;
+    font-size: 24px;
+    line-height: 21px;
+}
+
