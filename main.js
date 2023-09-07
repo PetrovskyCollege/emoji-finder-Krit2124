@@ -1,9 +1,17 @@
 import {data} from "./data/emoji.js";
 
-let emojiList = document.querySelector(".emojiList");
-
 function showEmoji(keyword) {
-    for (let i = 0; i < data.length; i++) {
-        console.log(data[i].title)
+    let emojiList = document.querySelector(".emojiList");
+    
+    for (emoji of data) {
+        if (data.includes(keyword)) {
+            let emojiBoxes = "";
+            emojiBoxes += '<div class="emojiTitle">' + data.title + "</div>";
+            emojiBoxes += '<div class="emojiSymbol">' + data.symbol + "</div>";
+            emojiBoxes += '<div class="emojiKeywords">' + data.keywords + "</div>";
+            emojiList.innerHTML = emojiBoxes;
+        }
     }
 }
+
+showEmoji("");
