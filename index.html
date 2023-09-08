@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emoji Finder</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <header>
@@ -19,25 +20,25 @@
 
         <div class="inputToFindPart">
             <div class="container">
-                <input type="text" placeholder="Placeholder" class="inputToFind" onchange="showEmoji(this.value)">
+                <input type="text" placeholder="Placeholder" id="inputToFind" class="inputToFind">
             </div>
         </div>
     </header>
 
     <main>
         <div class="emojiList">
-            <div class="container">
-                <div class="emojiBox">
-                    <!--
+            <div class="container emojiListContainer">
+                <!-- Структура выводимых эмодзи
+                    <div class="emojiBox">
                         <div class="emojiSymbol"></div>
                         <div class="emojiTitle"></div>
                         <div class="emojiKeywords"></div>
-                    -->
-                </div>
+                    </div> 
+                -->
             </div>
         </div>
     </main>
 
-    <script type="module" src="main.js"></script>
+    <script type="module" src="/main.js"></script>
 </body>
 </html>
