@@ -36,7 +36,11 @@ function emojiOutput(keyword) {
             let lastIndex = 0
             for (let i=0; i<emoji.keywords.length; i++) {
                 if ((emoji.keywords[i] == " ")||(i == emoji.keywords.length - 1)) {
-                    actualWord = emoji.keywords.slice(lastIndex, i)
+                    // Если это последний i, то нужно добавить последний символ
+                    if (i == emoji.keywords.length - 1) {
+                        actualWord = emoji.keywords.slice(lastIndex, i+1)
+                    } else actualWord = emoji.keywords.slice(lastIndex, i)
+                    
                     if (!(cleanKeywords.includes(actualWord))) {
                         cleanKeywords += actualWord + " "
                     }
