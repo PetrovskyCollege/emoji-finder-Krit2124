@@ -38,13 +38,17 @@ function emojiOutput(keyword) {
                 if ((emoji.keywords[i] == " ")||(i == emoji.keywords.length - 1)) {
                     // Если это последний i, то нужно добавить последний символ
                     if (i == emoji.keywords.length - 1) {
+                        // Сохранение текущего слова
                         actualWord = emoji.keywords.slice(lastIndex, i+1)
                     } else actualWord = emoji.keywords.slice(lastIndex, i)
                     
+                    // Добавление новых слов
                     if (!(cleanKeywords.includes(actualWord))) {
                         cleanKeywords += actualWord + " "
                     }
-                lastIndex = i
+
+                    // Сохранение последнего пробела
+                    lastIndex = i + 1
                 }
             }
             emojiKeywords.append(cleanKeywords)
