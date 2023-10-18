@@ -11,7 +11,7 @@ function emojiOutput(keyword) {
 
     // Перебор всех эмодзи
     data.forEach(emoji => {
-        if (emoji.keywords.includes(keyword)) {
+        if ((emoji.keywords.includes(keyword)) || (emoji.title.includes(keyword))) {
             // Получение карточки для эмодзи
             let emojiBox = document.createElement('div')
             emojiBox.className = "emojiBox"
